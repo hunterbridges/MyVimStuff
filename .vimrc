@@ -16,6 +16,7 @@ let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
+autocmd VimEnter * colorscheme blue
 
 set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
