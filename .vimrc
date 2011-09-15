@@ -1,3 +1,9 @@
+" Set up window
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+colorscheme xoria256
+autocmd BufEnter * syntax on
+
 " Filetype
 set filetype=on
 filetype plugin on
@@ -22,11 +28,6 @@ let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 " Clear Whitespace
 autocmd BufWritePre * :%s/\s\+$//e
-
-" Set up window
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
-colorscheme blue
 
 " Code folding
 set foldmethod=indent   "fold based on indent
