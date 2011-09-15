@@ -6,13 +6,17 @@ filetype indent on
 " Basic env
 set ruler
 set number
-set tabstop=2
-set shiftwidth=2
-set cindent
+set smartindent
 set scrolloff=10
 set expandtab
+set ai
+set sw=4
+set ts=4
+set sts=4
+set backspace=indent,eol,start
 
 " 80 char warning
+set cc=81
 let w:m1=matchadd('Search', '\%<81v.\%>77v', -1)
 let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
@@ -22,7 +26,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Set up window
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
-autocmd VimEnter * colorscheme blue
+colorscheme blue
 
 " Code folding
 set foldmethod=indent   "fold based on indent
