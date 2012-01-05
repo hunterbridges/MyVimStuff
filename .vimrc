@@ -20,6 +20,9 @@ set sw=4
 set ts=4
 set sts=4
 set backspace=indent,eol,start
+set nobackup
+set nowritebackup
+set noswapfile
 
 " 80 char warning
 set cc=81
