@@ -1,3 +1,6 @@
+" Pathogen
+call pathogen#infect()
+
 " Set up window
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
@@ -39,10 +42,10 @@ set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
 
 "Indentation
-autocmd FileType javascript,html,css,php set ai
-autocmd FileType javascript,html,css,php set sw=2
-autocmd FileType javascript,html,css,php set ts=2
-autocmd FileType javascript,html,css,php set sts=2
+autocmd FileType javascript,html,css,php,ruby set ai
+autocmd FileType javascript,html,css,php,ruby set sw=2
+autocmd FileType javascript,html,css,php,ruby set ts=2
+autocmd FileType javascript,html,css,php,ruby set sts=2
 
 "Enable autocompletion
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
