@@ -1,16 +1,22 @@
-" Pathogen
+"Pathogen
 call pathogen#infect()
 
 " Set up window
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
+syntax on
+set t_Co=256
 colorscheme xoria256
-autocmd BufEnter * syntax on
+
+let g:Powerline_symbols = 'fancy'
 
 " Filetype
 set filetype=on
 filetype plugin on
 filetype indent on
+
+" Retain clipboard
+xnoremap p pgvy
 
 " Basic env
 set ruler
@@ -26,11 +32,8 @@ set backspace=indent,eol,start
 set nobackup
 set nowritebackup
 set noswapfile
-
-" 80 char warning
 set cc=81
-let w:m1=matchadd('Search', '\%<81v.\%>77v', -1)
-let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+set ttyfast
 
 " Clear Whitespace
 autocmd BufWritePre * :%s/\s\+$//e
@@ -47,7 +50,3 @@ autocmd FileType javascript,html,css,php,ruby set sw=2
 autocmd FileType javascript,html,css,php,ruby set ts=2
 autocmd FileType javascript,html,css,php,ruby set sts=2
 
-"Enable autocompletion
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
