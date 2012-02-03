@@ -2,13 +2,17 @@
 call pathogen#infect()
 
 " Set up window
-autocmd VimEnter * NERDTree
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+map <leader>r :NERDTreeFind<cr>
 autocmd VimEnter * wincmd p
 syntax on
 set t_Co=256
 colorscheme xoria256
 
 let g:Powerline_symbols = 'fancy'
+let g:CommandTAcceptSelectionMap = '<C-t>'
+let g:CommandTAcceptSelectionTabMap = '<CR>'
+autocmd BufNew * if winnr('$') == 1 | tabmove99 | endif
 
 " Filetype
 set filetype=on
