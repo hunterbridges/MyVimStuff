@@ -10,9 +10,15 @@ set t_Co=256
 colorscheme xoria256
 
 let g:Powerline_symbols = 'fancy'
-let g:CommandTAcceptSelectionMap = '<C-t>'
-let g:CommandTAcceptSelectionTabMap = '<CR>'
-autocmd BufNew * if winnr('$') == 1 | tabmove99 | endif
+
+nmap <C-h> :tabprevious<CR>
+nmap <C-l> :tabnext<CR>
+map <C-h> :tabprevious<CR>
+map <C-l> :tabnext<CR>
+imap <C-h> <Esc>:tabprevious<CR>i
+imap <C-l> <Esc>:tabnext<CR>i
+nmap <C-t> :tabnew<CR>
+imap <C-t> <Esc>:tabnew<CR>
 
 " Filetype
 set filetype=on
@@ -38,6 +44,7 @@ set nowritebackup
 set noswapfile
 set cc=81
 set ttyfast
+set wildignore+=*.o,*.obj,.git,public/assets/**
 
 " Clear Whitespace
 autocmd BufWritePre * :%s/\s\+$//e
