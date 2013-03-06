@@ -63,4 +63,6 @@ autocmd FileType javascript,html,css,php,ruby set sw=2
 autocmd FileType javascript,html,css,php,ruby set ts=2
 autocmd FileType javascript,html,css,php,ruby set sts=2
 
+let g:gist_clip_command = 'pbcopy'
+let g:gist_detect_filetype = 1
 let g:gist_post_private=1
