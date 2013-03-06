@@ -20,6 +20,8 @@ imap <C-l> <Esc>:tabnext<CR>i
 nmap <C-t> :tabnew<CR>
 imap <C-t> <Esc>:tabnew<CR>
 
+map <C-j> :e %:p:s,.h$,.X123X,:s,.c$,.h,:s,.X123X$,.c,<CR>
+
 " Filetype
 set filetype=on
 filetype plugin on
@@ -61,3 +63,4 @@ autocmd FileType javascript,html,css,php,ruby set sw=2
 autocmd FileType javascript,html,css,php,ruby set ts=2
 autocmd FileType javascript,html,css,php,ruby set sts=2
 
+let g:gist_post_private=1
