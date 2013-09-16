@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/webapi-vim"]
 	path = .vim/bundle/webapi-vim
 	url = https://github.com/mattn/webapi-vim
+[submodule ".vim/bundle/wmgraphviz"]
+	path = .vim/bundle/wmgraphviz
+	url = https://github.com/wannesm/wmgraphviz.vim.git
